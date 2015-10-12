@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_darkblue" >
+
+    <LinearLayout
+        android:id="@+id/login_inputs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/app_label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:src="@drawable/logo" />
+
+    
+    <TextView
+        android:id="@+id/app_label"
+        style="@style/instruction_1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="162dp"
+        android:text="@string/wapas_aao_vendor_app" />
+
+    <TextView
+        android:id="@+id/app_version"
+        style="@style/instruction_1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/app_label"
+        android:layout_marginTop="19dp"
+        android:text="@string/wapas_aao_vendor_app_version" />
+     
+    
+</RelativeLayout>

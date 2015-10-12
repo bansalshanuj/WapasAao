@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TcServerSample", "TcServerSample.vcproj", "{95383E0B-4302-47E3-AC5E-21CAED1F8D1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Itanium = Debug|Itanium
+		Debug|Win32 = Debug|Win32
+		Release|Itanium = Release|Itanium
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95383E0B-4302-47E3-AC5E-21CAED1F8D1D}.Debug|Itanium.ActiveCfg = Debug|Itanium
+		{95383E0B-4302-47E3-AC5E-21CAED1F8D1D}.Debug|Itanium.Build.0 = Debug|Itanium
+		{95383E0B-4302-47E3-AC5E-21CAED1F8D1D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{95383E0B-4302-47E3-AC5E-21CAED1F8D1D}.Debug|Win32.Build.0 = Debug|Win32
+		{95383E0B-4302-47E3-AC5E-21CAED1F8D1D}.Release|Itanium.ActiveCfg = Release|Itanium
+		{95383E0B-4302-47E3-AC5E-21CAED1F8D1D}.Release|Itanium.Build.0 = Release|Itanium
+		{95383E0B-4302-47E3-AC5E-21CAED1F8D1D}.Release|Win32.ActiveCfg = Release|Win32
+		{95383E0B-4302-47E3-AC5E-21CAED1F8D1D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

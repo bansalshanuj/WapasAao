@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_darkblue" >
+
+    <LinearLayout
+        android:id="@+id/login_inputs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/submit_details_button"
+            style="@style/landing_last_page_buttons"
+            android:layout_width="136dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="22dp"
+            android:text="@string/submit" />
+
+        <ProgressBar
+            android:id="@+id/cooldown_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/submit_details_button"
+            android:layout_marginLeft="250dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="0dp"
+            android:indeterminate="false"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_progressBar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_will_take_time"
+            android:textSize="@dimen/login_inputs_page_big_font_size" />
+
+        <ProgressBar
+            android:id="@+id/login_progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_inputs_page_progress_bar_margin_top" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/business_name"
+        style="@style/login_page_test"
+        android:layout_below="@+id/login_inputs_layout"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="@string/business_name_hint" />
+
+    <EditText
+        android:id="@+id/business_address"
+        style="@style/login_page_edit_text"
+        android:layout_below="@+id/business_name"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="@string/business_address_hint" />
+
+    <EditText
+        android:id="@+id/payback_percent"
+        style="@style/login_page_edit_text"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/business_address"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="@string/payback_percent_hint" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

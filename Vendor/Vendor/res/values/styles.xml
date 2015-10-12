@@ -1,0 +1,124 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="login_page_check_box">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:layout_marginLeft">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:layout_marginBottom">@dimen/login_page_check_box_margin_bottom</item>
+        <item name="android:layout_marginTop">@dimen/login_page_check_box_margin_top</item>
+        <item name="android:textColor">@color/black_60</item>
+        <item name="android:inputType">text</item>
+        <item name="android:text">@string/hide_phone_number</item>
+        <item name="android:textSize">@dimen/login_page_check_box_font_size</item>
+    </style>
+
+    <style name="landing_last_page_buttons" parent="login_page_green_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">@dimen/login_page_button_side_margin</item>
+        <item name="android:layout_marginRight">@dimen/login_page_button_side_margin</item>
+        <item name="android:layout_marginBottom">@dimen/login_page_button_margin_bottom</item>
+    </style>
+
+    <style name="landing_last_page_buttons_test" parent="login_page_green_button">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_marginLeft">@dimen/login_page_button_side_margin</item>
+        <item name="android:layout_marginRight">@dimen/login_page_button_side_margin</item>
+        <item name="android:layout_marginBottom">@dimen/login_page_button_margin_bottom</item>
+    </style>
+
+    <style name="login_page_green_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/login_page_button_padding_top</item>
+        <item name="android:paddingBottom">@dimen/login_page_button_padding_bottom</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/button_green</item>
+        <item name="android:textSize">@dimen/login_page_button_font_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="login_page_edit_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/login_inputs_page_input_height</item>
+        <item name="android:paddingLeft">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:paddingRight">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:layout_marginRight">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:layout_marginLeft">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/darkestgrey</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColorHint">@color/lightgrey</item>
+        <item name="android:textSize">@dimen/login_inputs_page_input_font_size</item>
+    </style>
+
+    <style name="login_page_test">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/login_inputs_page_input_height</item>
+        <item name="android:paddingLeft">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:paddingRight">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:layout_marginRight">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:layout_marginLeft">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/darkestgrey</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColorHint">@color/lightgrey</item>
+        <item name="android:textSize">@dimen/login_inputs_page_input_font_size</item>
+    </style>
+
+    <style name="login_page_inputs_page_head">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:text">@string/enter_ur_details</item>
+        <item name="android:textSize">@dimen/login_page_inputs_page_head_font_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="instruction_1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:text">@string/instruction_1</item>
+        <item name="android:textSize">@dimen/login_page_inputs_page_head_font_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:paddingRight">@dimen/login_inputs_page_input_side_padding</item>
+    </style>
+
+    <style name="label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">@dimen/login_page_inputs_page_head_font_size</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingLeft">@dimen/login_inputs_page_input_side_padding</item>
+        <item name="android:paddingRight">@dimen/login_inputs_page_input_side_padding</item>
+    </style>
+    
+</resources>

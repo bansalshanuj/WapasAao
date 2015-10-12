@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/login_page_inputs_page_head_margin_bottom"
+    android:layout_marginLeft="@dimen/login_inputs_page_input_side_padding"
+    android:layout_marginRight="@dimen/login_inputs_page_input_side_padding"
+    android:layout_marginTop="@dimen/login_page_inputs_page_head_margin_top" >
+
+    <TextView style="@style/login_page_inputs_page_head" />
+
+</RelativeLayout>

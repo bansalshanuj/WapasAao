@@ -1,0 +1,75 @@
+/*
+             // This is the normal way of sending the request
+            string url = "http://wapasaao.com/WindowsApp/test.php";
+            WebRequest request = HttpWebRequest.Create(url);
+            WebResponse response = request.GetResponse();
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+             
+            string urlText = reader.ReadToEnd();
+            */
+
+            // Test using the JSON format.
+            string jsonMainURL = "http://api.wapasaao.com/Demo/PhpCode/addvendor.php";
+            //string jsonTestURL = "http://192.168.1.5/wa/Server/PhpCode/addvendor.php";
+
+            StringBuilder postData = new StringBuilder();
+            postData.Append((String.Format("vendorName={0}&", "testVendor")));
+            postData.Append((String.Format("address={0}&", "testAddress")));
+            postData.Append((String.Format("salespersonName={0}&", "xyz")));
+            postData.Append((String.Format("code={0}&", "-1")));
+            postData.Append((String.Format("conversionFactor={0}&", "13")));
+            postData.Append((String.Format("phoneNumber={0}", "9877849870")));
+
+            ASCIIEncoding ascii = new ASCIIEncoding();
+            // byte[] postBytes = ascii.GetBytes(postData.ToString());
+
+            // string postString = JsonUtilities.EncodeToJSONArray(postData.ToString());
+            byte[] bytes = Encoding.UTF8.GetBytes(postData.ToString());
+            // string xyzedwfcrf = @"http://192.168.1.5/wa/Server/PhpCode/addvendor.php?vendorName=testVendor&address=testAddress&salespersonName=xyz&code=-1&conversionFactor=13&phoneNumber=8899899999";
+            HttpWebRequest request = WebRequest.Create(jsonMainURL) as HttpWebRequest;
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = bytes.Length;
+            
+            // done only for POST method.
+            Stream requestStream = request.GetRequestStream();
+            requestStream.Write(bytes, 0, bytes.Length);
+
+            using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+            {
+                if (response.StatusCode != HttpStatusCode.OK)
+                    throw new Exception(String.Format(
+                    "Server error (HTTP {0}: {1}).",
+                    response.StatusCode,
+                    response.StatusDescription));
+                //DataContractJsonSerializer jsonSerializer = new DataContractJsonSerializer(typeof(obj));
+                //object objResponse = jsonSerializer.ReadObject(response.GetResponseStream());
+
+                //JavaScriptSerializer js = new JavaScriptSerializer();
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+
+                string jsonString = reader.ReadToEnd();
+                List<string> valueList = new List<string>();
+                //try
+                //{
+                //    JArray jo = JArray.Parse(jsonString);
+                //    foreach (JToken token in jo.Values())
+                //    {
+                //        if (token.Type == JsonTokenType.String)
+                //            valueList.Add(token.Value<string>().Trim());
+                //    }
+                //}
+                //catch (Exception ex)
+                //{
+                //    valueList.Add(jsonString);
+                   
+                //}
+                //valueList = this.capJsonParse(jsonString).ToList();
+                Newtonsoft.Json.JsonSerializer sz = new JsonSerializer();
+                TextReader txtReader = new StreamReader(response.GetResponseStream());
+                JsonReader jreader = new JsonTextReader(txtReader);
+                object obj = sz.Deserialize(jreader);
+
+                Dictionary<string, string> xyz = JsonUtilities.JsonToDictionary(jsonString);
+
+                // dynamic stuff = JObject.Parse(jsonString);

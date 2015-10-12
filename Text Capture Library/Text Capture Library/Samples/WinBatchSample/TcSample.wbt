@@ -1,0 +1,19 @@
+; Create TextCapture library COM server object 
+
+TcWindow = CreateObject("TextCaptureLib.Window")
+TcServer = CreateObject("TextCaptureLib.TextCapture")
+
+Pause("Notice", "Three seconds after you close this dialog, the mouse pointed window will be captured.")
+
+Timedelay(3)
+
+TcWindow.WindowFromCurrentPos
+
+result = TcServer.GetText(Dispatch:TcWindow)
+
+Pause("Getit!", result)
+
+TcWindow = 0
+TcServer = 0
+
+Exit

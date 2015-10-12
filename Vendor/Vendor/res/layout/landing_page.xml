@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_darkblue" >
+
+    <LinearLayout
+        android:id="@+id/login_inputs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textTNC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textTNC"
+        style="@style/instruction_1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="162dp"
+        android:text="@string/TNC" />
+
+    <TextView
+        android:id="@+id/TNC_agree_button"
+        style="@style/landing_last_page_buttons"
+        android:layout_width="136dp"
+        android:layout_alignTop="@+id/textTNC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp"
+        android:text="@string/TNC_agree" />
+
+</RelativeLayout>
